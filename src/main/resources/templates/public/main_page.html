@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<div th:replace="fragments/head_fragment :: head('Главная')"></div>
+<body>
+<div th:replace="fragments/header_fragment :: header"></div>
+<div class="articles_show">
+    <h1 class="articles_text">Статьи</h1>
+    <div th:each="articles : ${articleList}" class="select_article">
+        <a th:href="@{'/articles/view/' + ${articles.id}}" th:text="${articles.heading}"
+           class="heading_link"></a>
+        <div th:text="${'Автор: ' + articles.user.name + ' ' + articles.user.surname}" class="article_author"></div>
+        <div th:text="${articles.text.substring(0, 500)} + '...'" class="article_content"></div>
+        <div th:text="${'Дата публикации: ' + articles.date}" class="article_date_of_publish"></div>
+    </div>
+</div>
+</body>
+</html>

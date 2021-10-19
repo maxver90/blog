@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rating Added</title>
+    <link rel="stylesheet" th:href="@{/css/add_rating.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="main">
+    <h1 class="rating_added">Рейтинг поставлен</h1>
+    <a href="/main/navi" class="back_to_main_r">Вернуться на главную страницу</a>
+    <a th:href="@{'/articles/view/' + ${articleId}}" class="back_to_comments_r">Вернуться к комментариям</a>
+</div>
+</body>
+</html>

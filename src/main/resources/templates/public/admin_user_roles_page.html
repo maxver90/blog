@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Roles</title>
+</head>
+<body>
+<form th:action="@{/admin/users}" method="get">
+    <div>
+        <select name="userRoleId">
+            <option value="1">Admins</option>
+            <option value="2">Moderators</option>
+            <option value="3">Users</option>
+            <option value="4">Banned</option>
+        </select>
+        <button type="submit">Show</button>
+    </div>
+</form>
+<form th:action="@{/admin/users_edit}" method="post" th:each="user : ${userList}">
+    <p th:text="${user.name}"></p>
+    <input type="hidden" name="user_id" th:value="${user.id}">
+    </div>
+    <select name="user_role">
+        <option th:each="userRole : ${userRoleList}" th:value="${userRole.id}"
+                th:text="${userRole.name}" th:selected="${userRole.id == user.userRole.id}"></option>
+    </select>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

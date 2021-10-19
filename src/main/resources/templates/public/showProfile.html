@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<div th:replace="fragments/head_fragment :: head('Профиль')"></div>
+<body>
+<div th:replace="fragments/header_fragment :: header"></div>
+<div class="profile_parent">
+    <div class="profile_info">
+        <p class="profile_personal_info">Персональные данные</p>
+        <div th:text="${'Имя: ' + user.name}" class="personal_info"></div>
+        <div th:text="${'Фамилия: ' + user.surname}" class="personal_info"></div>
+        <div th:text="${'Логин: ' + user.login}" class="personal_info"></div>
+        <p class="profile_my_articles">Мои статьи</p>
+        <a th:href="@{'/articles/view/' + ${article.id}}" th:each="article : ${user.articles}"
+           th:text="${article.heading}">Heading</a>
+    </div>
+</div>
+</body>
+</html>

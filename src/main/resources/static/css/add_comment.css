@@ -1,0 +1,45 @@
+.main {
+    background-image: url("https://images.wallpaperscraft.ru/image/single/kod_programmirovanie_tekst_141301_1920x1080.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1920px;
+    height: 1080px;
+}
+
+.comment_added {
+    font-family: "Roboto", sans-serif;
+    color: darkorchid;
+    font-size: xx-large;
+}
+
+.back_to_main_c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 400px;
+    height: 60px;
+    font-size: x-large;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    background: lightgreen;
+    border: black solid 1px;
+    border-radius: 5px;
+}
+
+.back_to_comments_c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 400px;
+    height: 60px;
+    font-size: x-large;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    background: lightgreen;
+    border: black solid 1px;
+    border-radius: 5px;
+}

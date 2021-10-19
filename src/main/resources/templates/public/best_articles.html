@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<div th:replace="fragments/head_fragment :: head('Лучшие статьи')"></div>
+<body>
+<div th:replace="fragments/header_fragment :: header"></div>
+<div class="best_articles_container">
+    <div class="best_articles_parent">
+        <h1 class="best_articles_text">Лучшие статьи</h1>
+        <div th:each="bestArticles : ${bestArticles}" class="show_best_articles">
+            <div th:text="${bestArticles.heading}" class="heading_link"></div>
+            <div th:text="${'Автор: ' + bestArticles.user.name + bestArticles.user.surname}"
+                 class="article_author"></div>
+            <div th:text="${bestArticles.text}" class="best_article_content"></div>
+            <div th:text="${'Дата публикации: ' + bestArticles.date}" class="best_article_date_of_publish"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
