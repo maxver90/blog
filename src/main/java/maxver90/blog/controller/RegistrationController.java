@@ -22,14 +22,10 @@ public class RegistrationController {
     @Autowired
     private UserRoleRepository userRoleRepository;
 
-//     GET /registration -> showRegistrationPage
-
     @GetMapping
     public String showRegistrationPage() {
         return "public/registration_page";
     }
-
-//     POST /registration -> proceedRegistration
 
     @PostMapping
     public String proceedRegistration(
@@ -43,7 +39,7 @@ public class RegistrationController {
         user.setSurname(lastName);
         user.setLogin(login);
         user.setPassword(password);
-        user.setUserRole(userRoleRepository.getById(6L));
+        user.setUserRole(userRoleRepository.getById(3L));
         user.setDate(LocalDateTime.now());
         userRepository.save(user);
         return "public/success_registration";
