@@ -63,12 +63,12 @@ public class ArticleController {
         }
         Article article = articleRepository.findById(id).orElse(null);
         List<Rating> ratingList = article.getRatings();
-        int count = 0;
+        double count = 0;
         for (Rating rating : ratingList) {
             count += rating.getRating();
         }
         if (ratingList.size() != 0) {
-            int averageRating = count / ratingList.size();
+            double averageRating = count / ratingList.size();
             model.addAttribute("averageRating", averageRating);
         } else {
             model.addAttribute("averageRating", 0);

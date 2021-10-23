@@ -9,7 +9,7 @@
         <p class="new_article_inputs">Заголовок</p>
         <input type="text" name="heading" aria-label="heading"
                class="article_heading">
-        <p class="heading_note">* Не более 50ти символов</p>
+        <p class="heading_note">* Не более 100 символов</p>
         <p class="new_article_inputs">Категория статьи</p>
         <select name="category_id" class="new_article_category">
             <option th:each="category : ${categoryList}" th:value="${category.id}"

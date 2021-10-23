@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Article</title>
-</head>
+<div th:replace="fragments/head_fragment :: head('Отправлено')"></div>
 <body>
-<h1>Отправлено</h1>
+<div th:replace="fragments/header_fragment :: header"></div>
+<div class="publish_article_parent">
+    <h1 class="articles_text">Статья отправлена на проверку Администратору</h1>
+</div>
 </body>
 </html>

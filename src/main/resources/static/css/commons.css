@@ -30,8 +30,8 @@ body {
 }
 
 .admin {
-    color: darkgreen;
-    border: darkgreen 1px solid;
+    color: cadetblue;
+    border: cadetblue 1px solid;
     border-radius: 3px;
     font-size: 14px;
 }
@@ -85,17 +85,6 @@ body {
     display: flex;
     align-items: center;
     margin-top: 5px;
-}
-
-.article_status {
-    width: 150px;
-    height: 30px;
-}
-
-.show_articles_submit_button {
-    width: 150px;
-    height: 30px;
-    margin-left: 5px;
 }
 
 .select_article {
@@ -179,6 +168,7 @@ body {
     background: white;
     border-left: 1px darkgray solid;
     border-right: 1px darkgray solid;
+    min-height: calc(100vh - 52px)
 }
 
 .new_article_inputs {
@@ -234,6 +224,18 @@ body {
     border-radius: 3px;
 }
 
+.publish_article_parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-left: 1px darkgray solid;
+    border-right: 1px darkgray solid;
+    min-height: calc(100vh - 52px)
+}
+
 /*Article info*/
 
 .view_article_info {
@@ -268,7 +270,7 @@ body {
 }
 
 .rating_value {
-    margin-left: 38px;
+    margin-left: 13px;
     width: 30px;
     height: 27px;
 }
@@ -280,6 +282,12 @@ body {
     background: lightgreen;
     border: lightgreen 1px solid;
     border-radius: 3px;
+}
+
+.rating_was_added {
+    align-items: center;
+    color: lightgray;
+    margin-left: 13px;
 }
 
 .article_head {
@@ -326,6 +334,10 @@ body {
     height: 200px;
     padding: 5px 5px;
     margin-top: 5px;
+}
+
+.comment {
+    font-size: 14px;
 }
 
 .add_comment_buttons {
@@ -398,6 +410,10 @@ body {
     min-height: calc(100vh - 52px)
 }
 
+.registration_area {
+    min-height: calc(100vh - 52px)
+}
+
 .registration_text {
     font-size: 24px;
     margin-top: 15px;
@@ -422,7 +438,7 @@ body {
 }
 
 .registration_button {
-    margin-top: 15px;
+    margin-top: 25px;
     margin-bottom: 15px;
     margin-left: 44px;
     align-items: center;
@@ -490,8 +506,29 @@ body {
     margin-bottom: 10px;
 }
 
+.article_status {
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+}
+
 .admin_articles_page_form2 {
     padding: 5px 10px;
+}
+
+.admin_articles_links {
+    text-decoration: none;
+    color: black;
+}
+
+.show_articles_submit_button {
+    width: 150px;
+    height: 30px;
+    margin-left: 5px;
+    background: cadetblue;
+    border: cadetblue 1px solid;
+    color: white;
+    font-weight: bold;
 }
 
 .admin_user_role_filter {
@@ -505,6 +542,17 @@ body {
 .user_role_select {
     width: 150px;
     height: 30px;
+    padding: 0 10px;
+}
+
+.user_role_select_button {
+    width: 150px;
+    height: 30px;
+    margin-left: 5px;
+    background: cadetblue;
+    border: cadetblue 1px solid;
+    color: white;
+    font-weight: bold;
 }
 
 .admin_user_role_form2 {
@@ -515,4 +563,12 @@ body {
 .user_role_select_2 {
     padding: 0 10px;
     margin: 0 5px;
+}
+
+.admin_submit_buttons {
+    background: cadetblue;
+    border: cadetblue 1px solid;
+    border-radius: 2px;
+    color: white;
+    padding: 1px 8px;
 }

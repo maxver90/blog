@@ -34,9 +34,6 @@ public class CommentController {
     @Autowired
     private ArticleRepository articleRepository;
 
-    @Autowired
-    private CategoryRepository categoryRepository;
-
     @PostMapping(path = "/add")
     public String addComment(Authentication authentication,
                              @RequestParam Long article_id,
@@ -52,6 +49,5 @@ public class CommentController {
         model.addAttribute("articleId", article_id);
         commentRepository.save(comment);
         return "redirect:/articles/view/" + article_id;
-        //return "/public/add_comment";
     }
 }

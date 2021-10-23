@@ -40,6 +40,6 @@ public class RatingController {
         ratingValue.setRating(rating);
         ratingRepository.save(ratingValue);
         model.addAttribute("articleId", article_id);
-        return "/public/add_rating";
+        return "redirect:/articles/view/" + article_id;
     }
 }

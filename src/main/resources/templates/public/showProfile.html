@@ -11,7 +11,7 @@
         <div th:text="${'Логин: ' + user.login}" class="personal_info"></div>
         <p class="profile_my_articles">Мои статьи</p>
         <a th:href="@{'/articles/view/' + ${article.id}}" th:each="article : ${user.articles}"
-           th:text="${article.heading}">Heading</a>
+           th:text="${article.heading}" class="admin_articles_links">Heading</a>
     </div>
 </div>
 </body>

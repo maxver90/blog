@@ -9,7 +9,7 @@
         <a th:href="@{'/articles/view/' + ${articles.id}}" th:text="${articles.heading}"
            class="heading_link"></a>
         <div th:text="${'Автор: ' + articles.user.name + ' ' + articles.user.surname}" class="article_author"></div>
-        <div th:text="${articles.text.substring(0, 500)} + '...'" class="article_content"></div>
+        <div th:text="${articles.text.substring(0, articles.text.length() / 2) + '...'}" class="article_content"></div>
         <div th:text="${'Дата публикации: ' + articles.date}" class="article_date_of_publish"></div>
     </div>
 </div>

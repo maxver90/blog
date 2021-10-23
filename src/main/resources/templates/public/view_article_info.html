@@ -33,6 +33,9 @@ expr
                     </select>
                     <button type="submit" class="rating_button">Поставить рейтинг</button>
                 </div>
+                <div th:if="${#authorization.expr('isAuthenticated() && !hasRole(''BANNED'')') && rating}">
+                    <p class="rating_was_added">Рейтинг поставлен</p>
+                </div>
             </form>
         </div>
         <div class="add_comment">
@@ -49,7 +52,7 @@ expr
         <p class="comments_to_article_text">Комментарии к статье</p>
         <div class="comment_info" th:each="comment : ${article.getComments()}">
             <p th:text="${comment.user.name + ' ' + comment.user.surname}" class="comment_author"></p>
-            <p th:text="${comment.text}"></p>
+            <p th:text="${comment.text}" class="comment"></p>
         </div>
     </div>
 </div>

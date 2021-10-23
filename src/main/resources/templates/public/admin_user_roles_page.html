@@ -12,7 +12,7 @@
                 <option value="3">Users</option>
                 <option value="4">Banned</option>
             </select>
-            <button type="submit" class="user_role_select">Показать</button>
+            <button type="submit" class="user_role_select_button">Показать</button>
         </div>
     </form>
     <form th:action="@{/admin/users_edit}" method="post" th:each="user : ${userList}"
@@ -23,7 +23,7 @@
             <option th:each="userRole : ${userRoleList}" th:value="${userRole.id}"
                     th:text="${userRole.name}" th:selected="${userRole.id == user.userRole.id}"></option>
         </select>
-        <button type="submit">Подтвердить</button>
+        <button type="submit" class="admin_submit_buttons">Подтвердить</button>
     </form>
 </div>
 </body>

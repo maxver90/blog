@@ -1,9 +1,6 @@
 package maxver90.blog.controller;
 
 import maxver90.blog.entity.Article;
-import maxver90.blog.entity.User;
-import maxver90.blog.entity.UserRole;
-import maxver90.blog.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
@@ -21,10 +18,6 @@ public class MainPageController {
 
     @Autowired
     private EntityManager manager;
-
-    @Autowired
-    private UserRepository userRepository;
-
 
     @GetMapping(path = "/navi")
     public String getMainPage(Model model, Authentication authentication) {

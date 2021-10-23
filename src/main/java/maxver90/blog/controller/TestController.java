@@ -51,7 +51,7 @@ public class TestController {
 
     // https://vk.com/profile?id=731
     // https://vk.com/profile/731
-    // @PathVariable - аннотация, которая применяется для поределения параметров, скрытых в адресе ресурса.
+    // @PathVariable - аннотация, которая применяется для определения параметров, скрытых в адресе ресурса.
 
     @GetMapping(path = "/part_3/{login}")
     public String thirdPart(@PathVariable String login) {
@@ -59,7 +59,7 @@ public class TestController {
         return "test/part_3";
     }
 
-    // Model - обхект, который применятся для передачи данных из контроллера в представление (HTML).
+    // Model - объект, который применятся для передачи данных из контроллера в представление (HTML).
     // У объекта Model есть атрибуты. Атрибуты - структура по типу Map, в которой к каждому ключу соот-т
     // какая-то информация.
 

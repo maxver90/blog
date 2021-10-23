@@ -5,7 +5,6 @@ import maxver90.blog.entity.User;
 import maxver90.blog.entity.UserRole;
 import maxver90.blog.repository.ArticleRepository;
 import maxver90.blog.repository.UserRepository;
-import maxver90.blog.repository.UserRoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.util.List;
-import java.util.ListResourceBundle;
 import java.util.Optional;
 
 @Controller
@@ -26,9 +24,6 @@ public class AdminController {
 
     @Autowired
     private ArticleRepository articleRepository;
-
-    @Autowired
-    private UserRoleRepository userRoleRepository;
 
     @Autowired
     private UserRepository userRepository;

@@ -15,13 +15,13 @@
 </div>
 <form th:action="@{/admin/articles_edit}" method="post" th:each="articles : ${articleList}"
 class="admin_articles_page_form2">
-    <a th:href="@{'/articles/view/' + ${articles.id}}" th:text="${articles.heading}"></a>
+    <a th:href="@{'/articles/view/' + ${articles.id}}" th:text="${articles.heading}" class="admin_articles_links"></a>
     <input type="hidden" name="article_id" th:value="${articles.id}">
     <select name="is_published">
         <option value="true" th:selected="${articles.isPublished}">Опубликовать</option>
         <option value="false" th:selected="${!articles.isPublished}">Отклонить</option>
     </select>
-    <button type="submit">Подтвердить</button>
+    <button type="submit" class="admin_submit_buttons">Подтвердить</button>
 </form>
 </div>
 </body>

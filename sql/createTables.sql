@@ -1,7 +1,7 @@
 create table `user_roles`
 (
-    `id`          bigint unsigned auto_increment,
-    `name`        varchar(50) not null,
+    `id`           bigint unsigned auto_increment,
+    `name`         varchar(50) not null,
     `display_name` varchar(50) not null,
     primary key (`id`)
 );
@@ -40,6 +40,9 @@ create table `articles`
     foreign key (category_id) references Categories (id)
 );
 
+alter table `articles`
+    modify column `heading` varchar(100);
+
 create table `comments`
 (
     `id`         bigint unsigned auto_increment,
@@ -70,5 +73,3 @@ from `articles`
          left join `ratings` on articles.id = ratings.article_id
 group by `articles`.id
 order by `averageRating` desc;
-
-
