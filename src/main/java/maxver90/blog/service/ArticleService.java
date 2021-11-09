@@ -10,8 +10,6 @@ import java.util.List;
 
 @Service
 public class ArticleService {
-    // Service - компонент приложения Spring, который отвечает за логику работы отдельного элемента приложения.
-    // Сервис можно внедрять в любой точке программы через @Autowired.
     public double getAverageRating(Article article) {
         List<Rating> ratingList = article.getRatings();
         double count = 0;

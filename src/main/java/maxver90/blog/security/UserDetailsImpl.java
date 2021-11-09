@@ -10,10 +10,9 @@ import java.util.List;
 
 public class UserDetailsImpl implements UserDetails {
 
-    //UserDetails - интерфейс, который описывает пользователя с точки зрения Spring Security.
-
     private final User user;
-    public UserDetailsImpl (User user) {
+
+    public UserDetailsImpl(User user) {
         this.user = user;
     }
 

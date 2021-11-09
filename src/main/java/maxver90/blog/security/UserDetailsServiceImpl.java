@@ -13,16 +13,13 @@ import java.util.Optional;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-    // UserDetailsService - интерфейс, в котором описан метод для поиска пользователя. В реализации этого метода
-    // должна быть описана конкретная логика для поиска и формирования объекта UserDetails
-
     @Autowired
     private UserRepository userRepository;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<User> user = userRepository.findByLogin(username);
-        if (user.isPresent()){
+        if (user.isPresent()) {
             UserDetails userDetails = new UserDetailsImpl(user.get());
             return userDetails;
         } else {
