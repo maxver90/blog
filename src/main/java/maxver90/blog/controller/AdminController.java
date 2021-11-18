@@ -1,5 +1,4 @@
 package maxver90.blog.controller;
-
 import maxver90.blog.entity.Article;
 import maxver90.blog.entity.User;
 import maxver90.blog.entity.UserRole;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.util.List;
